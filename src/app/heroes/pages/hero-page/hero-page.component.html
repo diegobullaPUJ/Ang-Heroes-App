@@ -1,1 +1,59 @@
-<p>hero-page works!</p>
+
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+
+<div *ngIf="hero; else divLoading" class="grid p-2" >
+
+  <mat-card class="col-10 sm:col-3 mr-5">
+     <mat-card-header class="p-3">
+       <mat-card-title>{{ hero.alter_ego }}</mat-card-title>
+      <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
+       </mat-card-header>
+    <img style="min-height: auto;" [src]="hero | heroImage" alt="hero.superhero" mat-card-image  />
+  </mat-card>
+
+  <mat-card  class="col-10 sm:col-8">
+    <mat-card-header>
+      <mat-card-title>Información</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item><strong>Super heroe: </strong> {{ hero.superhero }}</mat-list-item>
+        <mat-list-item><strong>Primera aparición: </strong> {{ hero.first_appearance }}</mat-list-item>
+        <mat-list-item><strong>Personajes: </strong> {{ hero.characters }}</mat-list-item>
+        <mat-list-item><strong>Publicado por: </strong> {{ hero.publisher }}</mat-list-item>
+        <mat-list-item><strong>Alter Ego: </strong> {{ hero.alter_ego }}</mat-list-item>
+      </mat-list>
+
+      <div class="grid col:10 sm:col-5">
+        <button mat-stroked-button (click)="goBack()">
+          Regresar a la lista de héroes
+          <mat-icon>
+            arrow_back
+          </mat-icon>
+        </button>
+      </div>
+
+      <div class="grid col:10 sm:col-7 pt-3">
+        <button mat-stroked-button (click)="goSearch()">
+          Regresar al buscador de héroes
+          <mat-icon>
+            arrow_back
+          </mat-icon>
+        </button>
+      </div>
+
+
+
+
+    </mat-card-content>
+  </mat-card>
+
+</div>
