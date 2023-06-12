@@ -20,5 +20,9 @@ Aplicación de Angular ```biblioteca de héroes``` donde abordaremos los siguien
   6. Peticiones HTTP
   7. JSON-Server
   8. Prime Flex
+  9. CRUD = Create Read Update DElete
+  10. Snacks
+  11. Dialogs
+  12. Inyeccion de servicios manualmente
 
 
