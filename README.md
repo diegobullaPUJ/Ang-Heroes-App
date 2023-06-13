@@ -24,5 +24,13 @@ Aplicación de Angular ```biblioteca de héroes``` donde abordaremos los siguien
   10. Snacks
   11. Dialogs
   12. Inyeccion de servicios manualmente
+  13. Protección de rutas
+  14. Rutas privadas
+  15. Rutas públicas
+  16. Servicio de autenticación
+  17. Guards
+  18. Can Activate
+  19. Can Match
+  20. Mantener la sesión del usuario
 
 
